@@ -6,6 +6,14 @@ let mainPage = document.querySelector(".choose");
 let gamePage = document.querySelector(".container");
 let turn;
 
+// Add sound effect
+let audioBtn = new Audio();
+audioBtn.src = "./mixkit-arcade-game-jump-coin-216.wav";
+let audioWinner = new Audio();
+audioWinner.src = "./mixkit-achievement-bell-600.wav";
+let audioEnter = new Audio();
+audioEnter.src = "./mixkit-retro-arcade-casino-notification-211.wav";
+
 // Add Click Events
 
 boxs.forEach((box) => {
@@ -29,6 +37,7 @@ function player(ox) {
   mainPage.style.display = "none";
   gamePage.style.display = "block";
   title.innerHTML = `${ox} Player Turn`;
+  audioEnter.play();
 }
 
 function game(element) {
@@ -41,6 +50,8 @@ function game(element) {
     turn = "X";
     title.innerHTML = "X Player Turn";
   }
+
+  audioBtn.play();
   winner();
 }
 
@@ -107,7 +118,7 @@ function addClass(n1, n2, n3) {
   boxs[n1].classList.add("winner");
   boxs[n2].classList.add("winner");
   boxs[n3].classList.add("winner");
-
+  audioWinner.play();
   title.innerHTML = `${boxs[n3].innerHTML} Player Win`;
 
   setInterval(() => {
