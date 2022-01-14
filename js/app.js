@@ -8,11 +8,11 @@ let turn;
 
 // Add sound effect
 let audioBtn = new Audio();
-audioBtn.src = "../mixkit-arcade-game-jump-coin-216.wav";
+audioBtn.src = "./mixkit-arcade-game-jump-coin-216.wav";
 let audioWinner = new Audio();
-audioWinner.src = "../mixkit-achievement-bell-600.wav";
+audioWinner.src = "./mixkit-achievement-bell-600.wav";
 let audioEnter = new Audio();
-audioEnter.src = "../mixkit-retro-arcade-casino-notification-211.wav";
+audioEnter.src = "./mixkit-retro-arcade-casino-notification-211.wav";
 
 // Add Click Events
 
